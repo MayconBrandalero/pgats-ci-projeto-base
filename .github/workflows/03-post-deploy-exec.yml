@@ -1,12 +1,12 @@
 #nome que vai aparece nas opções da pipe
-name: "Execução por Deploy"
+name: 'Execução por Deploy'
 
 #triggers ou gatilhos de execução
 on:
-    workflow_run:
-      workflows: ["Execução Manual"]
-      types:
-        - completed
+  workflow_run:
+    workflows: ['Execução Manual']
+    types:
+      - completed
 jobs:
   #Descrição do job
   e2e-tests:
@@ -21,7 +21,7 @@ jobs:
 
       - name: Instalando Yarn
         run: npm install -g yarn
-            
+
       - name: Instalando dependencias
         run: yarn
 
