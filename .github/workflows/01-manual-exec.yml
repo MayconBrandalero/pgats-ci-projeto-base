@@ -16,13 +16,13 @@ jobs:
         steps: 
             - uses: actions/checkout@v4
             - name: Instalando Yarn
-                run: npm install -g yarn
+              run: npm install -g yarn
             
             - name: Instalando dependencias
-                run: yarn
+              run: yarn
 
             - name: Instalando Playwright
-                run: yarn playwright
+              run: yarn playwright
 
             - name: Testes E2E (end to end)
-                run: yarn run e2e
+              run: yarn run e2e
