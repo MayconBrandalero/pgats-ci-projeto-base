@@ -9,17 +9,17 @@ jobs:
   inspection:
     run-on: ubuntu-latest
 
-  steps:
-    - uses: actions/checkout@v4
+    steps:
+      - uses: actions/checkout@v4
 
-    - name: Instalando Yarn
-      run: npm install -g yarn
+      - name: Instalando Yarn
+        run: npm install -g yarn
 
-    - name: Instalando dependencias
-      run: yarn
+      - name: Instalando dependencias
+        run: yarn
 
-    - name: Padronizacao de codigo (Lint)
-      run: yarn lint
+      - name: Padronizacao de codigo (Lint)
+        run: yarn lint
 
   #Descrição do job
   e2e-tests:
