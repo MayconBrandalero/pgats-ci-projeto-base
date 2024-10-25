@@ -5,16 +5,16 @@
 #nesse caso, gatilho agendado = schedule
 #on:
 #  schedule:
-    #Cron POSIX - CrontabGuru, site para auxiliar a entender
+#Cron POSIX - CrontabGuru, site para auxiliar a entender
 #    - cron: '0 8 * * 1'
 
 #jobs:
-  #Descrição do job
+#Descrição do job
 #  e2e-tests:
-    #Maquina que o job vai executar
+#Maquina que o job vai executar
 #    runs-on: ubuntu-latest
 
-    #Passo a passo das ações do job
+#Passo a passo das ações do job
 #    steps:
 #      - name: Instalando Yarn
 #        run: npm install -g yarn
