@@ -11,9 +11,9 @@ on:
 
 # inspecao
 #   padronizacao (formatacao de código)
-# testes 💜
+# testes
 #   unidade
-#   e2e 💜
+#   e2e
 #     build
 # deploy
 
@@ -35,7 +35,7 @@ jobs:
 
   unit:
     runs-on: ubuntu-latest
-
+    needs: [inspection]
     steps:
       - uses: actions/checkout@v4
 
@@ -52,6 +52,7 @@ jobs:
   e2e-tests:
     # maquina que o job vai executar
     runs-on: ubuntu-latest
+    needs: [unit]
 
     # passo a passo das acoes do job
     steps:
@@ -84,3 +85,7 @@ jobs:
         with:
           name: relatorio-de-testes
           path: ./playwright-report
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [e2e-tests]
